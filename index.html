@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 14px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="topSection">
+          <div class="container topSection__container">
+            <div class="front-card">
+              <img
+                src="./images/bg-card-front.png"
+                alt="credit card front part"
+              />
+              <img
+                src="./images/card-logo.svg"
+                alt="credit card logo"
+                class="icon details"
+              />
+              <span
+                class="card-number details info"
+                data-base="0000 0000 0000 0000"
+                >0000 0000 0000 0000</span
+              >
+              <p class="card-name details info" data-base="Jane Appleseed">
+                Jane Appleseed
+              </p>
+
+              <div class="card-date details">
+                <span class="card-month info" data-base="00">00</span>/
+                <span class="card-year info" data-base="00">00</span>
+              </div>
+              <div class="animate-div"></div>
+            </div>
+            <div class="back-card">
+              <img
+                src="./images/bg-card-back.png"
+                alt="credit card back part"
+              />
+              <span class="cvc info" data-base="000">000</span>
+              <div class="animate-div"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="formSection">
+          <div class="container formSection__container">
+            <form class="form form-front">
+              <div class="form-group">
+                <label for="name">Card Holder Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="input-name"
+                  placeholder="e.g. Jane Appleseed"
+                />
+                <small></small>
+              </div>
+              <div class="form-group">
+                <label for="number">Card Number</label>
+                <input
+                  type="text"
+                  name="number"
+                  id="number"
+                  class="input-number"
+                  placeholder="e.g. 1234 5678 9123 000"
+                />
+                <small></small>
+              </div>
+              <div class="last-group">
+                <div class="form-group-date">
+                  <label for="date">Exp. data (MM/YY)</label>
+                  <div class="form-group">
+                    <input type="month" placeholder="MM" class="input-month" />
+                    <input type="year" placeholder="YY" class="input-year" />
+                    <small></small>
+                  </div>
+                </div>
+                <div class="form-group-cvc form-group">
+                  <label for="cvc">cvc</label>
+                  <input
+                    type="text"
+                    id="cvc"
+                    name="cvc"
+                    class="input-cvc"
+                    placeholder="e.g. 123"
+                  />
+                  <small></small>
+                </div>
+              </div>
+              <button type="submit" class="form-btn">Confirm</button>
+            </form>
+
+            <div class="form-back">
+              <img
+                src="./images/icon-complete.svg"
+                alt="form submitted successfully"
+              />
+              <h3>Thank you!</h3>
+              <p>We've added your card details</p>
+
+              <button class="form-btn btn-continue">Continue</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Completed state start -->
+
+    <!-- Thank you! We've added your card details Continue -->
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/talentlessDeveloper">Kareem</a>.
+    </footer>
+  </body>
+</html>
